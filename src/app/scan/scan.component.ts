@@ -1,4 +1,7 @@
+import { ScanService } from '../services/scan.service';
+
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Rx';
 
 @Component({
   selector: 'matrix-scan',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScanComponent implements OnInit {
 
-  constructor() { }
+  scans: Observable<any>;
+  constructor(private scanService: ScanService) { }
 
   ngOnInit() {
+    this.scans = this.scanService.getScans();
   }
 
 }
