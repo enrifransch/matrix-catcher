@@ -14,19 +14,19 @@ var ScanResult = mongoose.model('ScanResult', {
     },
     carrier: {
         type: String,
-        require: true
+        required: true
     },
     mobileNetworkCode: {
         type: Number,
-        require: true
+        required: true
     }, 
     band: {
         type: Number,
-        require: true
+        required: true
     },
     bandWidth: {
         type: Number,
-        require: true
+        required: true
     },
     channel: {
         type: Number,
@@ -34,7 +34,7 @@ var ScanResult = mongoose.model('ScanResult', {
     },
     range: {
         type: String,
-        require: true
+        required: true
     },
     rLevel: {
         type: Number,
@@ -42,7 +42,7 @@ var ScanResult = mongoose.model('ScanResult', {
     },
     locationAreaCode: {
         type: Number,
-        require: true
+        required: true
     },
     utranCellId: {
         type: Number,
@@ -62,21 +62,21 @@ var ScanResult = mongoose.model('ScanResult', {
     },
     updateL: {
         type: Boolean,
-        require: true,
+        required: true,
         default: false
     },
     cathodeRayOscilloscope: {
         type: String,
-        require: true
+        required: true
     },
     transfersList: {
         type: Array,
-        require: true,
+        required: true,
         default: []
     },
     neighbours: {
         type: Array,
-        require: true,
+        required: true,
         default: []
     }
 });
