@@ -4,7 +4,7 @@ import * as express from 'express';
 import { Application } from 'express';
 import { apiScan } from './routes/apiScan';
 
-import  mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 
 

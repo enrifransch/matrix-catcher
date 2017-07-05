@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ModalDirective } from "ngx-bootstrap/modal";
 
 @Component({
   selector: 'matrix-targets',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TargetsComponent implements OnInit {
 
+  fade : boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  @ViewChild('childModal') public childModal:ModalDirective;
+ 
+  public showChildModal():void {
+    this.fade = true;
+    this.childModal.show();
+  }
+ 
+  public hideChildModal():void {
+    this.childModal.hide();
+  }
+
+  quetal() {
+    this.fade = false;
   }
 
 }

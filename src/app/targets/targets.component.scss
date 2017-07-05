@@ -1,0 +1,12 @@
+.fade-way-fade-way{
+    position: fixed;
+    top : 0;
+    bottom : 0;
+    left : 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+    &.shown {
+        display: block;
+    }
+}

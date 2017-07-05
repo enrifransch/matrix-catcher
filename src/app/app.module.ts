@@ -10,7 +10,8 @@ import { ScanModule } from './scan/scan.module';
 import { TargetsModule } from './targets/targets.module';
 import { HttpModule } from '@angular/http';
 import { ScanService } from './services/scan.service';
-
+import { AlertModule, CarouselModule, ModalModule, DatepickerModule } from 'ngx-bootstrap';
+import { ConfigModule } from "./config/config.module";
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,12 @@ import { ScanService } from './services/scan.service';
     AppRoutingModule,
     ScanModule,
     TargetsModule,
-    HttpModule
+    HttpModule,
+    ConfigModule,
+    AlertModule.forRoot(),
+    CarouselModule.forRoot(),
+    ModalModule.forRoot(),
+    DatepickerModule.forRoot()
   ],
   providers: [
     ScanService
